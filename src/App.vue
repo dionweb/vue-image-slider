@@ -36,12 +36,10 @@ export default {
   mounted: function() {
     this.startSlide();
   },
-
   methods: {
     startSlide: function() {
       this.timer = setInterval(this.next, 6000);
     },
-
     next: function() {
       this.currentIndex++;
     },
@@ -52,7 +50,6 @@ export default {
       this.currentIndex = n;
     }
   },
-
   computed: {
     currentImg: function() {
       return this.images[Math.abs(this.currentIndex) % this.images.length];
@@ -67,12 +64,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 body {
   margin: 0px;
   overflow: hidden;
 }
-
 fade-enter-active,
 .fade-leave-active {
   transition: all 0.5s ease;
@@ -82,19 +77,16 @@ fade-enter-active,
   width: 100%;
   opacity: 1;
 }
-
 .fade-enter,
 .fade-leave-to {
   visibility: hidden;
   width: 100%;
   opacity: 0;
 }
-
 img {
   height: 100vh;
   width: 100%;
 }
-
 .prev,
 .next {
   cursor: pointer;
@@ -114,18 +106,15 @@ img {
 .next {
   right: 0;
 }
-
 .prev {
   left: 0;
 }
-
 .dots {
   position: absolute;
   bottom: 3%;
   left: 50%;
   transform: translate(-50%, 0%);
 }
-
 .dot {
   cursor: pointer;
   width: 50px;
